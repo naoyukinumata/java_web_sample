@@ -31,4 +31,10 @@ public class HomeController {
 		model.addAttribute("userList", list);
 		return "home";
 	}
+	@RequestMapping(value = "skip", method = RequestMethod.GET)
+	public String skip(Model model) {
+		System.out.println("SKIP ACTION");
+		return "redirect:home";
+	}
+	
 }
