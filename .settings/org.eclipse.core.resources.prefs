@@ -1,3 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/main/webapp/WEB-INF/views/home.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/point.jsp=UTF-8
+encoding//src/test/java/jp/co/sample/HomeControllerTest.java=UTF-8
+encoding//src/test/java/jp/co/sample/PointControllerTest.java=UTF-8
+encoding/<project>=UTF-8
