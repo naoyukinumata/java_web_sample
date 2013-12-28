@@ -16,11 +16,15 @@ public class HomeForm implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	@NotNull(message="Point‚ª‹ó‚¾‚¼")
-	@NumberFormat( style = Style.NUMBER)
+	@NotNull(message = "PointNotNull")
+	@NumberFormat(style = Style.NUMBER)
 	@Min(1)
 	@Max(100)
 	private Integer point;
+
+	@NotNull(message = "user_idNull")
+	@NumberFormat(style = Style.NUMBER)
+	private Integer user_id;
 
 	public Integer getPoint() {
 		return point;
@@ -30,12 +34,11 @@ public class HomeForm implements Serializable {
 		this.point = point;
 	}
 
-}
-// @NotEmpty(message="Point‚ª‹ó‚¾‚¼")
-// @Size(min=1, max=10, message="’·‚³‚Í1‚©‚ç10‚¾‚¼")
-// private String name;
-//
-// @Email
-// private String email
-//
+	public Integer getUser_id() {
+		return user_id;
+	}
 
+	public void setUser_id(Integer user_id) {
+		this.user_id = user_id;
+	}
+}

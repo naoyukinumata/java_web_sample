@@ -163,6 +163,12 @@
 			<artifactId>mybatis-oscache</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.0.0.Final</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>point</finalName>

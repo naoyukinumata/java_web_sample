@@ -5,6 +5,8 @@
 <configuration>
 	<typeAliases>
 		<typeAlias type="jp.co.sample.model.User" alias="User" />
+		<typeAlias type="jp.co.sample.model.Point" alias="Point" />
+		<typeAlias type="jp.co.sample.model.PointHistory" alias="PointHistory" />
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
@@ -20,5 +22,7 @@
 	</environments>
 	<mappers>
 		<mapper resource="jp/co/sample/model/mapper/user-mapper.xml" />
+		<mapper resource="jp/co/sample/model/mapper/point-mapper.xml" />
+		<mapper resource="jp/co/sample/model/mapper/point_history-mapper.xml" />
 	</mappers>
 </configuration>

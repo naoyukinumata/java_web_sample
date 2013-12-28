@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC
+  "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jp.co.sample.model.mapper.PointMapper">
+	<resultMap id="testResultMap" type="Point">
+		<id property="id" column="ID" />
+		<id property="user_id" column="user_id" />
+		<id property="point" column="point" />
+	</resultMap>
+	<parameterMap type="Point" id="testParameter">
+		<parameter property="id"/>
+		<parameter property="point"/>
+		<parameter property="user_id"/>
+	</parameterMap>
+
+	<cache type="org.mybatis.caches.oscache.OSCache" />
+	<select id="selectAll" resultMap="testResultMap">
+		SELECT * FROM POINT
+	</select>
+	<select id="selectByUserId" resultMap="testResultMap">
+		SELECT * FROM POINT WHERE user_id = #{user_id}
+	</select>
+	<insert id="insert" parameterType="Point">
+	    INSERT INTO POINT(id, user_id, point) VALUES(#{id}, #{user_id}, #{point})
+	</insert>
+	<update id="update" parameterType="Point">
+		update POINT set point = point + #{point} where user_id = #{user_id}
+	</update>
+
+</mapper>
